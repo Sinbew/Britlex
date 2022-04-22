@@ -1,5 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #8f95a5;
 }
 
 h1,
@@ -7,10 +15,21 @@ h2,
 h3,
 h4,
 h5,
-h6,
-ul,
-li,
+h6 {
+  margin: 0;
+}
+
 p {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -26,11 +45,28 @@ a {
   /* outline: 1px solid red; */
 }
 .section {
-  padding: 25px 0px;
-  padding-bottom: 0px;
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
 
-/* --------------------Header------------------- */
+.section-title {
+  margin-bottom: 60px;
+
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.5;
+  text-align: center;
+  color: #000000;
+}
+/*
+===================
+| Header
+===================
+*/
+.header {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
 
 .header-container {
   display: flex;
@@ -93,6 +129,10 @@ a {
   border: 2px solid transparent;
 }
 /* Hero section */
+.hero {
+  padding-top: 0;
+}
+
 .container-hero {
   display: flex;
 }
@@ -136,16 +176,21 @@ a {
   color: #ffffff;
   background-color: #60bbdf;
 }
-/* ------------------------------Skills section------------------------------- */
-.skills-section-title {
+/*
+------------------------------
+Skills section
+-------------------------------
+*/
+/* Using common class section-title instead */
+/* .skills-section-title {
   font-weight: 600;
   font-size: 48px;
   line-height: 1.5;
   padding-top: 150px;
-  padding-bottom: 60px;
+  margin-bottom: 60px;
   text-align: center;
   color: #000000;
-}
+} */
 
 .skills-cards-wrap {
   display: flex;
@@ -163,15 +208,19 @@ a {
   transform: scale(1.03);
 }
 
+.skills-card-group {
+  width: 350px;
+}
+
 .skills-img {
   margin-bottom: 24px;
 }
 .skills-subtitle {
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 30px;
   line-height: 1.5;
-  margin-bottom: 20px;
-
   color: #263238;
 }
 
@@ -179,8 +228,8 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  padding-right: 32px;
-  margin-bottom: 20px;
+  /* padding-right: 32px; */
+  margin-bottom: 24px;
   color: #8f95a5;
 }
 /* .skills-card:hover skills-text {
@@ -192,14 +241,17 @@ a {
 }
 
 .first-card {
+  padding: 32px 18px 154px 18px;
+
   height: 947px;
   width: 426px;
-  padding: 32px 18px 154px 18px;
 }
 .second-card {
-  height: 579px;
-  width: 426px;
   padding: 32px 18px 154px 18px;
+
+  width: 426px;
+  height: 579px;
+
   transition: background-color 250ms ease, transform 250ms ease;
 }
 
@@ -214,12 +266,14 @@ a {
 }
 .fourth-card {
   display: flex;
+  flex-direction: row-reverse;
+
   margin-left: 456px;
   margin-top: -368px;
-  flex-direction: row-reverse;
-  height: 338px;
-  width: 882px;
   padding: 18px 32px;
+
+  width: 882px;
+  height: 338px;
 }
 .fourth-card-leftside {
   padding-top: 14px;
@@ -233,176 +287,229 @@ a {
 }
 
 .skills-btn {
+  /* Box-model */
   padding: 17px 63px;
-  background-color: #263238;
+
+  /* Typography */
   color: #ffffff;
+
+  /* Visual */
   border-radius: 10px;
+  background-color: #263238;
+
+  /* Misc */
+  transition: background-color 250ms ease-in;
   border: none;
   cursor: pointer;
-  transition: background-color 250ms ease-in;
 }
 .skills-btn:hover {
   background-color: #60bbdf;
 }
 
-/* ------------------------------About-us section------------------------------- */
-.about-us-section {
+/*
+------------------------------
+About-us section
+-------------------------------
+*/
+/* .about-us-section {
   padding-top: 150px;
-}
-
-.about-us-wrap {
+} */
+.about-us-container {
   display: flex;
 }
-.about-us-title {
+.about-us-leftside {
+  width: 652px;
+  margin-right: 146px;
+}
+
+/* .about-us-title {
   font-weight: 600;
   font-size: 48px;
   line-height: 1.5;
   margin-bottom: 60px;
   color: #000000;
+} */
+
+.about-us-title {
+  text-align: left;
 }
-.about-us-text {
+
+/* Дивись загальні стилі для параграфа */
+/* .about-us-text {
+  margin-bottom: 30px;
+
   font-weight: 400;
   font-size: 20px;
   line-height: 1.8;
-  margin-bottom: 30px;
   color: #8f95a5;
   padding-right: 146px;
-}
+} */
 
 .advantages {
+  /* width: 555px; */
   display: flex;
-  width: 555px;
+  justify-content: center;
+  gap: 130px;
+}
+
+.advantages-item {
+  width: 110px;
+  color: #2a3246;
   text-align: center;
-  justify-content: space-evenly;
+}
+
+.advantages-item:hover,
+.advantages-item:hover .things {
+  color: #60bbdf;
+}
+
+.quantity {
+  /* Typography */
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.5;
+
+  /* Misc */
+  transition: color 250ms ease-in;
 }
 
 .things {
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 1.5;
-  cursor: pointer;
-  color: #2a3246;
-  transition: color 250ms ease-in;
-}
-
-.quantity:hover .things {
-  color: #60bbdf;
-}
-.things-2 {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
-  cursor: pointer;
   color: #8f95a5;
+
   transition: color 250ms ease-in;
-}
-.quantity:hover .things-2 {
-  color: #60bbdf;
+  cursor: pointer;
 }
 
-/* ----------------------------Pricing section-----------------------------*/
-.pricing-section {
+/*
+----------------------------
+Pricing section
+-----------------------------
+*/
+/* .pricing-section {
   padding: 180px 0;
-}
+} */
 .pricing-list {
   display: flex;
+  gap: 30px;
 }
 .pricing-list-item {
-  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* outline: 1px dashed blueviolet; */
 }
-.pricing-list-item:hover {
-}
-.pricing-list-item:last-child {
-  margin-right: 0;
-}
+
 .list-item-img {
   margin-bottom: 30px;
+
+  border-radius: 10%;
   transform: scale(1);
   transition: 0.3s ease-in-out;
-  cursor: pointer;
-  border-radius: 10%;
+  /* cursor: pointer; */
 }
-.list-item-img:hover {
-  transform: scale(1.1);
+.pricing-list-item:hover .list-item-img {
+  transform: scale(1.05);
   box-shadow: 5px 22px 50px -1px #cfcfcf;
 }
-.pricing-section-title {
+/* .pricing-section-title {
   text-align: center;
   font-weight: 600;
   font-size: 48px;
   line-height: 1.5;
   margin-bottom: 60px;
   color: #000000;
+} */
+
+.pricing-text-group {
+  margin-bottom: 30px;
+  /* outline: 1px solid red; */
 }
 .list-item-subtitle {
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 30px;
   line-height: 1.5;
-  margin-bottom: 20px;
   text-transform: capitalize;
-
   color: #263238;
 }
-.list-item-text {
+/* Дивись на глобальні стилі параграфа */
+/* .list-item-text {
   margin-bottom: 30px;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
 
   color: #8f95a5;
-}
-.text-2,
-.text-3 {
-  margin-bottom: 60px;
-}
-.pricing-btn-list {
+} */
+
+/* .pricing-btn-list {
   display: flex;
-}
-.pricing-btn-item {
+} */
+/* .pricing-btn-item {
   margin-right: 207px;
-}
-.pricing-btn-item:last-child {
+} */
+/* .pricing-btn-item:last-child {
   margin-right: 0;
-}
-.item-btn {
+} */
+
+.pricing-meta {
+  display: inline-block;
   padding: 5px 22px;
+
+  /* Прижимаємо плашку з ціною до низу карточки */
+  margin-top: auto;
+
   font-size: 24px;
   line-height: 1.5;
-  text-align: center;
-
   color: #263238;
-  background: #eeeeee;
+
+  background-color: #eeeeee;
   border-radius: 5px;
   border: none;
-  cursor: pointer;
+
+  cursor: context-menu;
   transition: color 250ms ease-in, background-color 250ms ease-in;
 }
 
-.item-btn:hover {
+.pricing-list-item:hover .pricing-meta {
   color: #f3f3f3;
   background-color: #60bbdf;
 }
-.item-btn:hover .btn-text {
-  color: #f3f3f3;
-}
-.btn-text {
+
+.pricing-meta-period {
+  margin-left: 22px;
+
   font-size: 18px;
   line-height: 1.5;
-
-  text-align: center;
-
   color: #546269;
+
   transition: color 250ms ease-in;
 }
-
-/*---------------------Contact us section--------------------  */
-.contact-us-section {
-  padding-bottom: 53px;
+.pricing-list-item:hover .pricing-meta-period {
+  color: #f3f3f3;
 }
-.contact-us-wrapper {
+/*
+--------------------
+Contact us section
+--------------------
+*/
+.contact-us-section {
+  /* padding-bottom: 53px; */
+  padding-bottom: 0;
+}
+.contact-us-container {
   display: flex;
 }
-.contact-us-title {
+
+.contact-us-rightside {
+  width: 768px;
+  margin-left: auto;
+}
+/* .contact-us-title {
   font-weight: 600;
   font-size: 48px;
   line-height: 1.5;
@@ -410,21 +517,30 @@ a {
   padding-left: 144px;
 
   color: #000000;
+} */
+
+.contact-us-title {
+  text-align-last: left;
 }
 .contact-us-text {
-  font-weight: 400;
+  margin-bottom: 30px;
+  width: 654px;
+  /* padding-left: 144px;
+  padding-right: 144px; */
+
+  /* font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
-  margin-bottom: 30px;
-  padding-left: 144px;
-  padding-right: 144px;
-  color: #8f95a5;
+  color: #8f95a5; */
 }
 
 .form {
-  padding-left: 144px;
+  /* padding-left: 144px; */
+
+  display: flex;
 }
 .input {
+  flex-grow: 1;
   border: 1px solid #8f95a5;
   box-sizing: border-box;
   border-radius: 10px;
@@ -433,6 +549,7 @@ a {
 }
 .submit-btn {
   padding: 20px 56px;
+  min-width: 312px;
 
   cursor: pointer;
 
@@ -446,24 +563,38 @@ a {
   background-color: #60bbdf;
   border: 1px solid #60bbdf;
 }
-/* -------------------------Footer--------------------------- */
-
-.footer-wrap {
-  display: flex;
-  align-items: center;
-  padding: 22px 0px 77px 0px;
-  position: relative;
+/* -------------------------
+Footer
+---------------------------
+*/
+.footer {
+  padding-top: 55px;
+  padding-bottom: 55px;
 }
 
-.footer-wrap::before {
-  position: absolute;
+.footer-container {
+  /* padding: 22px 0px 77px 0px; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 22px;
+
+  /* border-top: 1px solid #c4c4c4; */
+}
+
+.footer-container::before {
   content: '';
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
   display: block;
   width: 1338px;
   height: 1px;
+
   background-color: #c4c4c4;
-  top: -1px;
-  left: 0;
 }
 
 .footer-logo {
