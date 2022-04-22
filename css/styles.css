@@ -402,20 +402,25 @@ Pricing section
   flex-direction: column;
   align-items: flex-start;
   /* outline: 1px dashed blueviolet; */
+  transition: transform 250ms ease, box-shadow 250ms ease, border-radius 250ms ease;
+}
+.pricing-list-item:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 14px 50px -1px #cfcfcf;
+  border-radius: 10px;
 }
 
 .list-item-img {
   margin-bottom: 30px;
 
-  border-radius: 10%;
-  transform: scale(1);
-  transition: 0.3s ease-in-out;
+  transform: scale(0.9);
+  transition: 0.4s ease-in-out;
   /* cursor: pointer; */
 }
 .pricing-list-item:hover .list-item-img {
-  transform: scale(1.05);
-  box-shadow: 5px 22px 50px -1px #cfcfcf;
+  transform: scale(1.04);
 }
+
 /* .pricing-section-title {
   text-align: center;
   font-weight: 600;
@@ -427,7 +432,14 @@ Pricing section
 
 .pricing-text-group {
   margin-bottom: 30px;
+
+  transition: padding 250ms ease, font-size 250ms ease;
   /* outline: 1px solid red; */
+}
+
+.pricing-list-item:hover .pricing-text-group {
+  padding: 0 20px;
+  font-size: 18px;
 }
 .list-item-subtitle {
   margin-bottom: 20px;
@@ -437,16 +449,20 @@ Pricing section
   line-height: 1.5;
   text-transform: capitalize;
   color: #263238;
+  transition: color 250ms ease, transform 450ms ease;
 }
-/* Дивись на глобальні стилі параграфа */
-/* .list-item-text {
-  margin-bottom: 30px;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.5;
 
-  color: #8f95a5;
-} */
+.pricing-list-item:hover .list-item-subtitle {
+  color: #60bbdf;
+}
+
+/* Дивись на глобальні стилі параграфа */
+.list-item-text {
+  transition: color 250ms ease, transform 450ms ease;
+}
+.pricing-list-item:hover .list-item-text {
+  color: #263238;
+}
 
 /* .pricing-btn-list {
   display: flex;
@@ -474,12 +490,15 @@ Pricing section
   border: none;
 
   cursor: context-menu;
-  transition: color 250ms ease-in, background-color 250ms ease-in;
+  transition: color 250ms ease-in, background-color 250ms ease, transform 550ms ease,
+    margin-left 250ms ease;
 }
 
 .pricing-list-item:hover .pricing-meta {
   color: #f3f3f3;
   background-color: #60bbdf;
+  transform: scale(1.3);
+  margin-left: 93px;
 }
 
 .pricing-meta-period {
