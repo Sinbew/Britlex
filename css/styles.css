@@ -405,7 +405,7 @@ Pricing section
   transition: transform 250ms ease, box-shadow 250ms ease, border-radius 250ms ease;
 }
 .pricing-list-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: 3px 14px 50px -1px #cfcfcf;
   border-radius: 10px;
 }
@@ -414,11 +414,11 @@ Pricing section
   margin-bottom: 30px;
 
   transform: scale(0.9);
-  transition: 0.4s ease-in-out;
+  transition: 250ms ease-in-out;
   /* cursor: pointer; */
 }
 .pricing-list-item:hover .list-item-img {
-  transform: scale(1.04);
+  transform: scale(1);
 }
 
 /* .pricing-section-title {
