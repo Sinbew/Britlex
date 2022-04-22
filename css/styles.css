@@ -458,7 +458,7 @@ Pricing section
 
 /* Дивись на глобальні стилі параграфа */
 .list-item-text {
-  transition: color 250ms ease, transform 450ms ease;
+  transition: color 250ms ease;
 }
 .pricing-list-item:hover .list-item-text {
   color: #263238;
@@ -490,7 +490,7 @@ Pricing section
   border: none;
 
   cursor: context-menu;
-  transition: color 250ms ease-in, background-color 250ms ease, transform 550ms ease,
+  transition: color 250ms ease, background-color 250ms ease, transform 250ms ease,
     margin-left 250ms ease;
 }
 
@@ -508,7 +508,7 @@ Pricing section
   line-height: 1.5;
   color: #546269;
 
-  transition: color 250ms ease-in;
+  transition: color 250ms ease;
 }
 .pricing-list-item:hover .pricing-meta-period {
   color: #f3f3f3;
